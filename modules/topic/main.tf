@@ -10,7 +10,7 @@ provider "alicloud" {
 resource "alicloud_ons_topic" "default" {
   instance_id  = var.instance_id
   count        = var.number_of_topic
-  topic        = var.topic_names[count.index]
+  topic_name   = var.topic_names[count.index]
   message_type = length(var.message_type) > count.index ? var.message_type[count.index] : 0
   remark       = length(var.topic_remarks) > count.index ? var.topic_remarks[count.index] : null
 }

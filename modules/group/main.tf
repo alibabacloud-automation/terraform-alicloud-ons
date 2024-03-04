@@ -10,6 +10,6 @@ provider "alicloud" {
 resource "alicloud_ons_group" "default" {
   count       = var.number_of_group
   instance_id = var.instance_id
-  group_id    = var.group_names[count.index]
+  group_name  = var.group_names[count.index]
   remark      = length(var.group_remarks) > count.index ? var.group_remarks[count.index] : null
 }
