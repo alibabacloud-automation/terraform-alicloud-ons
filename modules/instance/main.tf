@@ -8,6 +8,6 @@ provider "alicloud" {
 }
 
 resource "alicloud_ons_instance" "default" {
-  name   = var.instance_name
-  remark = var.instance_remark
+  instance_name = var.instance_name
+  remark        = var.instance_remark
 }

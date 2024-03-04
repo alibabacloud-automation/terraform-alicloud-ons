@@ -11,9 +11,14 @@ provider "alicloud" {
   profile = var.profile
 }
 
+resource "random_integer" "default" {
+  max = 99999
+  min = 10000
+}
+
 resource "alicloud_ons_instance" "this" {
-  name   = "test_instance"
-  remark = "test_instance_remark"
+  instance_name = "test_instance-${random_integer.default.result}"
+  remark        = "test_instance_remark"
 }
 
 module "group" {
@@ -22,7 +27,7 @@ module "group" {
   region = var.region
 
   #instance
-  instance_id     = alicloud_ons_instance.this.id
+  instance_id = alicloud_ons_instance.this.id
 
   #group
   number_of_group = 2
@@ -30,6 +35,3 @@ module "group" {
   group_remarks   = ["test_group_remark01", "test_group_remark02"]
 
 }
-
-
-

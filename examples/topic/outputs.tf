@@ -1,6 +1,6 @@
 output "this_instance_name" {
   description = "Name of ONS Instance."
-  value       = alicloud_ons_instance.this.name
+  value       = alicloud_ons_instance.this.instance_name
 }
 
 output "this_instance_id" {

@@ -1,6 +1,6 @@
 output "this_topic_names" {
   description = "The list names of ONS Topic."
-  value       = alicloud_ons_topic.default.*.topic
+  value       = alicloud_ons_topic.default.*.topic_name
 }
 
 output "this_topic_remarks" {
