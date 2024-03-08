@@ -1,4 +1,8 @@
-## 1.1.0 (Unreleased)
+## 1.2.0 (Unreleased)
+
+## 1.1.1 (March 8, 2024)
+
+- update readme [GH-4](https://github.com/alibabacloud-automation/terraform-alicloud-ons/pull/4)
 
 ## 1.1.0 (March 8, 2024)
 
