@@ -19,7 +19,7 @@ terraform-alicloud-ons
 
 ```hcl
 module "ons" {
-    source      = "terraform-alicloud-modules/ons/alicloud"
+    source      = "alibabacloud-automation/ons/alicloud"
     region      = "cn-beijing"
     profile     = "Your-Profile-Name"
     
