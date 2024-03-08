@@ -21,7 +21,7 @@ The Module requires Terraform 0.12 and Terraform Provider AliCloud 1.56.0+.
 
 ```hcl
 module "ons" {
-    source      = "terraform-alicloud-modules/ons/alicloud"
+    source      = "alibabacloud-automation/ons/alicloud"
     region      = "cn-beijing"
     profile     = "Your-Profile-Name"
     
